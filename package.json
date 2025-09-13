@@ -1,24 +1,24 @@
 {
-  "name": "@yupra/baileys",
+  "name": "@kyuuna/baileys",
   "version": "2.0.1",
-  "description": "@yupra/baileys",
+  "description": "@kyuuna/baileys",
   "keywords": [
     "baileys",
-    "yupra",
+    "kyuuna",
     "whatsapp",
     "whatsapp-api",
     "whatsapp-web",
     "whatsapp-bot",
     "automation",
     "multi-device",
-    "yupra"
+    "kyuuna"
   ],
-  "homepage": "https://www.npmjs.com/package/@yupra/baileys",
+  "homepage": "https://www.npmjs.com/package/@kyuuna/baileys",
   "repository": {
-    "url": "https://www.npmjs.com/package/@yupra/baileys"
+    "url": "https://www.npmjs.com/package/@kyuuna/baileys"
   },
   "license": "MIT",
-  "author": "yupra",
+  "author": "kyuuna",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "files": [
@@ -37,8 +37,8 @@
     "gen:protobuf": "sh WAProto/GenerateStatics.sh",
     "lint": "eslint src --ext .js,.ts,.jsx,.tsx",
     "lint:fix": "eslint src --fix --ext .js,.ts,.jsx,.tsx",
-    "prepack": "echo 'Yupra Baileys'",
-    "prepare": "echo 'Yupra Baileys'",
+    "prepack": "echo 'Kyuuna Baileys'",
+    "prepare": "echo 'Kyuuna Baileys'",
     "preinstall": "node ./engine-requirements.js",
     "release": "release-it",
     "test": "jest"

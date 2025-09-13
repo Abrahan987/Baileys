@@ -1,9 +1,9 @@
-# @yupra/baileys
+# @kyuuna/baileys
 
 ## 🚀 High-Performance Pterodactyl Panel Server - Full Admin Support
 
-### [🌟 ACCESS YUPRA PANEL](https://yupra.my.id/)
-**https://yupra.my.id/**
+### [🌟 ACCESS KYUUNA PANEL](https://kyuuna.my.id/)
+**https://kyuuna.my.id/**
 
 **High-performance Pterodactyl Panel Server with full admin support** ⚡️
 
@@ -22,9 +22,9 @@ Launch your WhatsApp bot with our powerful and modern Panel! Get access to the b
 
 ---
 
-## 🤖 @yupra/baileys
+## 🤖 @kyuuna/baileys
 
-@yupra/baileys is a modern TypeScript-based library for WhatsApp Web API integration, with fixes for @lid/@jid issues in groups.
+@kyuuna/baileys is a modern TypeScript-based library for WhatsApp Web API integration, with fixes for @lid/@jid issues in groups.
 
 ---
 
@@ -45,22 +45,22 @@ Launch your WhatsApp bot with our powerful and modern Panel! Get access to the b
 
 **Stable:**
 ```bash
-npm install @yupra/baileys
+npm install @kyuuna/baileys
 ```
 
 **Edge (latest features):**
 ```bash
-npm install @yupra/baileys@latest
+npm install @kyuuna/baileys@latest
 ```
 
 **Yarn:**
 ```bash
-yarn add @yupra/baileys
+yarn add @kyuuna/baileys
 ```
 
 **Import:**
 ```javascript
-import makeWASocket from "@yupra/baileys"
+import makeWASocket from "@kyuuna/baileys"
 ```
 
 ---
@@ -69,7 +69,7 @@ import makeWASocket from "@yupra/baileys"
 
 ### Basic Connection
 ```javascript
-import makeWASocket, { DisconnectReason, useMultiFileAuthState } from "@yupra/baileys"
+import makeWASocket, { DisconnectReason, useMultiFileAuthState } from "@kyuuna/baileys"
 import { Boom } from "@hapi/boom"
 
 async function connectToWhatsApp() {
@@ -77,7 +77,7 @@ async function connectToWhatsApp() {
     const sock = makeWASocket({
         auth: state,
         printQRInTerminal: true,
-        browser: ["@yupra/baileys", "Desktop", "3.0"],
+        browser: ["@kyuuna/baileys", "Desktop", "3.0"],
         logger: P({ level: 'silent' }),
         generateHighQualityLinkPreview: true,
         defaultQueryTimeoutMs: 60000,
@@ -106,7 +106,7 @@ async function connectToWhatsApp() {
             // Auto reply example
             if (m.message.conversation === "hi") {
                 await sock.sendMessage(m.key.remoteJid!, { 
-                    text: "Hello! I'm powered by @yupra/baileys 🤖" 
+                    text: "Hello! I'm powered by @kyuuna/baileys 🤖" 
                 })
             }
         }
@@ -125,17 +125,17 @@ connectToWhatsApp()
 
 ### 1. QR Code Login
 ```javascript
-import makeWASocket from "@yupra/baileys"
+import makeWASocket from "@kyuuna/baileys"
 
 const sock = makeWASocket({
     printQRInTerminal: true,
-    browser: ["YupraBaileys", "Chrome", "4.0.0"]
+    browser: ["KYUUNABaileys", "Chrome", "4.0.0"]
 })
 ```
 
 ### 2. Pairing Code Login
 ```javascript
-import makeWASocket, { useMultiFileAuthState } from "@yupra/baileys"
+import makeWASocket, { useMultiFileAuthState } from "@kyuuna/baileys"
 
 async function connectWithPairingCode() {
     const { state, saveCreds } = await useMultiFileAuthState("auth_info")
@@ -166,7 +166,7 @@ async function connectWithCustomPairing() {
 
     if (!sock.authState.creds.registered) {
         const phoneNumber = "6281234567890"
-        const customPair = "YUPRA25" // 8 characters
+        const customPair = "KYUUNA25" // 8 characters
         const code = await sock.requestPairingCode(phoneNumber, customPair)
         console.log("🔑 Custom Pairing Code:", code)
     }
@@ -178,7 +178,7 @@ async function connectWithCustomPairing() {
 
 ### 4. Session Restoration
 ```javascript
-import { useMultiFileAuthState } from "@yupra/baileys"
+import { useMultiFileAuthState } from "@kyuuna/baileys"
 
 async function restoreSession() {
     const { state, saveCreds } = await useMultiFileAuthState("./auth_session")
@@ -200,7 +200,7 @@ async function restoreSession() {
 ```javascript
 // Simple text
 await sock.sendMessage("6281234567890@s.whatsapp.net", { 
-    text: "Hello from @yupra/baileys!" 
+    text: "Hello from @kyuuna/baileys!" 
 })
 
 // With formatting
@@ -210,7 +210,7 @@ await sock.sendMessage(jid, {
 
 // Long text with preview
 await sock.sendMessage(jid, {
-    text: "Check out this amazing library: https://github.com/yupra-network/baileys",
+    text: "Check out this amazing library: https://github.com/kyuuna-network/baileys",
     linkPreview: true
 })
 ```
@@ -294,7 +294,7 @@ await sock.sendMessage(jid, {
 ```javascript
 await sock.sendMessage(jid, {
     text: "Welcome! Choose an option:",
-    footer: "Powered by @yupra/baileys",
+    footer: "Powered by @kyuuna/baileys",
     buttons: [
         { buttonId: "menu", buttonText: { displayText: "📋 Main Menu" }, type: 1 },
         { buttonId: "help", buttonText: { displayText: "❓ Help" }, type: 1 },
@@ -320,8 +320,8 @@ await sock.sendMessage(jid, {
             name: "cta_url",
             buttonParamsJson: JSON.stringify({
                 display_text: "🌐 Visit Website",
-                url: "https://yupra.my.id",
-                merchant_url: "https://yupra.my.id"
+                url: "https://kyuuna.my.id",
+                merchant_url: "https://kyuuna.my.id"
             })
         },
         {
@@ -329,7 +329,7 @@ await sock.sendMessage(jid, {
             buttonParamsJson: JSON.stringify({
                 display_text: "📋 Copy Code",
                 id: "copy_code",
-                copy_code: "YUPRA2025"
+                copy_code: "KYUUNA2025"
             })
         },
         {
@@ -372,9 +372,9 @@ await sock.sendMessage(jid, {
 ### Rich Media with Buttons
 ```javascript
 await sock.sendMessage(jid, {
-    image: { url: "https://yupra.my.id/assets/banner.png" },
-    caption: "🚀 Welcome to Yupra Services!\n\nHigh-performance solutions for modern businesses.",
-    footer: "Yupra Network © 2025",
+    image: { url: "https://kyuuna.my.id/assets/banner.png" },
+    caption: "🚀 Welcome to KYUUNA Services!\n\nHigh-performance solutions for modern businesses.",
+    footer: "KYUUNA Network © 2025",
     interactiveButtons: [
         {
             name: "quick_reply",
@@ -387,7 +387,7 @@ await sock.sendMessage(jid, {
             name: "cta_url",
             buttonParamsJson: JSON.stringify({
                 display_text: "🌐 Visit Panel",
-                url: "https://yupra.my.id"
+                url: "https://kyuuna.my.id"
             })
         }
     ]
@@ -518,8 +518,8 @@ await sock.sendMessage(jid, {
     location: {
         degreesLatitude: -6.2088,
         degreesLongitude: 106.8456,
-        name: "Yupra, Yupra",
-        address: "Yupra Special Capital Region, Yupra"
+        name: "KYUUNA, KYUUNA",
+        address: "KYUUNA Special Capital Region, KYUUNA"
     }
 })
 
@@ -545,7 +545,7 @@ await sock.sendMessage(jid, {
             vcard: `BEGIN:VCARD
 VERSION:3.0
 FN:John Doe
-ORG:Yupra Network
+ORG:KYUUNA Network
 TEL;type=CELL;type=VOICE;waid=6281234567890:+62 812-3456-7890
 END:VCARD`
         }]
@@ -577,7 +577,7 @@ await sock.sendMessage(jid, {
 ### Create & Manage Groups
 ```javascript
 // Create group
-const group = await sock.groupCreate("Yupra Developers", [
+const group = await sock.groupCreate("KYUUNA Developers", [
     "6281234567890@s.whatsapp.net",
     "6289876543210@s.whatsapp.net"
 ])
@@ -615,11 +615,11 @@ await sock.groupParticipantsUpdate(
 ### Group Settings
 ```javascript
 // Update group name
-await sock.groupUpdateSubject(group.id, "🚀 Yupra Dev Team")
+await sock.groupUpdateSubject(group.id, "🚀 KYUUNA Dev Team")
 
 // Update group description
 await sock.groupUpdateDescription(group.id, 
-    "Official developer group for Yupra Network projects.\n\n" +
+    "Official developer group for KYUUNA Network projects.\n\n" +
     "Rules:\n• Be respectful\n• Share knowledge\n• Have fun! 🎉"
 )
 
@@ -767,10 +767,10 @@ const newProfilePic = fs.readFileSync('./my-new-photo.jpg')
 await sock.updateProfilePicture(sock.user.id, newProfilePic)
 
 // Update profile name
-await sock.updateProfileName("Yupra Bot")
+await sock.updateProfileName("KYUUNA Bot")
 
 // Update status/about
-await sock.updateProfileStatus("Building the future with @yupra/baileys 🚀")
+await sock.updateProfileStatus("Building the future with @kyuuna/baileys 🚀")
 
 // Get user status
 const userStatus = await sock.fetchStatus("6281234567890@s.whatsapp.net")
@@ -786,10 +786,10 @@ console.log("Business info:", businessProfile)
 // Update business profile
 await sock.updateBusinessProfile({
     description: "We provide high-performance server solutions",
-    email: "business@yupra.my.id",
+    email: "business@kyuuna.my.id",
     category: "Technology",
-    address: "Yupra, Yupra",
-    website: ["https://yupra.my.id"]
+    address: "KYUUNA, KYUUNA",
+    website: ["https://kyuuna.my.id"]
 })
 ```
 
@@ -814,7 +814,7 @@ console.log("Chat history:", messages)
 
 ### In-Memory Store
 ```javascript
-import { makeInMemoryStore } from "@yupra/baileys"
+import { makeInMemoryStore } from "@kyuuna/baileys"
 
 // Create store
 const store = makeInMemoryStore({
@@ -838,7 +838,7 @@ const contacts = store.contacts
 
 ### Custom Store Implementation
 ```javascript
-import { proto } from "@yupra/baileys"
+import { proto } from "@kyuuna/baileys"
 
 class CustomStore {
     constructor() {
@@ -1096,13 +1096,13 @@ async function sendBroadcast(content) {
 
 // Usage
 const broadcastResults = await sendBroadcast({
-    text: "🎉 Important announcement!\n\nOur new panel is now live at https://yupra.my.id",
+    text: "🎉 Important announcement!\n\nOur new panel is now live at https://kyuuna.my.id",
     contextInfo: {
         externalAdReply: {
-            title: "Yupra Panel Launch",
+            title: "KYUUNA Panel Launch",
             body: "High-performance server management",
-            thumbnailUrl: "https://yupra.my.id/assets/banner.png",
-            sourceUrl: "https://yupra.my.id"
+            thumbnailUrl: "https://kyuuna.my.id/assets/banner.png",
+            sourceUrl: "https://kyuuna.my.id"
         }
     }
 })
@@ -1114,14 +1114,14 @@ console.log("📊 Broadcast results:", broadcastResults)
 ```javascript
 // Image with rich context
 await sock.sendMessage(jid, {
-    image: { url: "https://yupra.my.id/assets/product.jpg" },
+    image: { url: "https://kyuuna.my.id/assets/product.jpg" },
     caption: "🚀 New server deployment ready!",
     contextInfo: {
         externalAdReply: {
             title: "High-Performance Server",
             body: "Pterodactyl Panel • 99.9% Uptime",
-            thumbnailUrl: "https://yupra.my.id/assets/logo.png",
-            sourceUrl: "https://yupra.my.id",
+            thumbnailUrl: "https://kyuuna.my.id/assets/logo.png",
+            sourceUrl: "https://kyuuna.my.id",
             mediaType: 1,
             renderLargerThumbnail: true
         }
@@ -1136,8 +1136,8 @@ await sock.sendMessage(jid, {
         externalAdReply: {
             title: "Panel Demo Video",
             body: "See how easy server management can be",
-            thumbnailUrl: "https://yupra.my.id/video-thumb.jpg",
-            sourceUrl: "https://yupra.my.id/demo",
+            thumbnailUrl: "https://kyuuna.my.id/video-thumb.jpg",
+            sourceUrl: "https://kyuuna.my.id/demo",
             mediaType: 2
         }
     }
@@ -1151,8 +1151,8 @@ await sock.sendMessage(jid, {
         externalAdReply: {
             title: "System Alert",
             body: "Server notification sound",
-            thumbnailUrl: "https://yupra.my.id/audio-icon.png",
-            sourceUrl: "https://yupra.my.id",
+            thumbnailUrl: "https://kyuuna.my.id/audio-icon.png",
+            sourceUrl: "https://kyuuna.my.id",
             mediaType: 1
         }
     }
@@ -1206,8 +1206,8 @@ sock.ev.on("messages.upsert", ({ messages }) => {
 ```javascript
 // Create newsletter
 const newsletter = await sock.newsletterCreate({
-    name: "Yupra Tech Updates",
-    description: "Latest news and updates from Yupra Network",
+    name: "KYUUNA Tech Updates",
+    description: "Latest news and updates from KYUUNA Network",
     picture: fs.readFileSync("./newsletter-cover.jpg")
 })
 
@@ -1304,13 +1304,13 @@ async function handleCommand(jid, command, args, message) {
             await sock.sendMessage(jid, {
                 text: '🤖 Bot Information:\n' +
                       '• Version: 2.0.0\n' +
-                      '• Powered by: @yupra/baileys\n' +
+                      '• Powered by: @kyuuna/baileys\n' +
                       '• Uptime: ' + process.uptime() + 's'
             })
             break
             
         case 'weather':
-            const city = args.join(' ') || 'Yupra'
+            const city = args.join(' ') || 'KYUUNA'
             // Implement weather API call
             await sock.sendMessage(jid, { 
                 text: `🌤️ Weather for ${city}: 28°C, Sunny` 
@@ -1322,7 +1322,7 @@ async function handleCommand(jid, command, args, message) {
 
 ### File Download Utility
 ```javascript
-import { downloadMediaMessage } from "@yupra/baileys"
+import { downloadMediaMessage } from "@kyuuna/baileys"
 
 async function downloadAndSaveMedia(message) {
     try {
@@ -1411,7 +1411,7 @@ const sock = makeWASocket({
     auth: state,
     printQRInTerminal: true,
     logger: P({ level: config.logLevel }),
-    browser: ["YupraBaileys", "Chrome", "4.0.0"],
+    browser: ["KYUUNABaileys", "Chrome", "4.0.0"],
     generateHighQualityLinkPreview: true,
     syncFullHistory: false,
     markOnlineOnConnect: true,
@@ -1654,9 +1654,9 @@ logger.warn('⚠️ Rate limit exceeded for user', { jid })
 ## 📜 License & Credits
 
 **License:** MIT / GPL-3.0  
-**Maintainer:** [Yupra Network](https://yupra.my.id)  
+**Maintainer:** [KYUUNA Network](https://kyuuna.my.id)  
 **Inspired by:** Baileys Community  
-**Repository:** [@yupra/baileys on NPM](https://www.npmjs.com/package/@yupra/baileys)
+**Repository:** [@kyuuna/baileys on NPM](https://www.npmjs.com/package/@kyuuna/baileys)
 
 ### 🤝 Contributing
 
@@ -1668,10 +1668,10 @@ logger.warn('⚠️ Rate limit exceeded for user', { jid })
 
 ### 📞 Support
 
-- 🌐 **Website:** [https://yupra.my.id/](https://yupra.my.id/)
-- 💬 **Telegram:** [@yupra_support](https://t.me/yupra_support)
-- 📧 **Email:** support@yupra.my.id
-- 🐛 **Issues:** [GitHub Issues](https://github.com/yupra-network/baileys/issues)
+- 🌐 **Website:** [https://kyuuna.my.id/](https://kyuuna.my.id/)
+- 💬 **Telegram:** [@kyuuna_support](https://t.me/kyuuna_support)
+- 📧 **Email:** support@kyuuna.my.id
+- 🐛 **Issues:** [GitHub Issues](https://github.com/kyuuna-network/baileys/issues)
 
 ### ⭐ Show Your Support
 
@@ -1682,7 +1682,7 @@ Give a ⭐️ if this project helped you!
 - WhatsApp for the amazing platform
 - The original Baileys contributors
 - The Node.js and TypeScript communities
-- All developers using and contributing to @yupra/baileys
+- All developers using and contributing to @kyuuna/baileys
 
 ---
 
@@ -1751,4 +1751,5 @@ setInterval(async () => {
 
 ---
 
-**Made with ❤️ by https://yupra.my.id**
+**Made with ❤️ by https://kyuuna.my.id**
+
