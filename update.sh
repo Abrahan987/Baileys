@@ -2,7 +2,7 @@
 # Auto update semua file ke GitHub & npmjs
 
 echo "======================================"
-echo " 🚀 Auto Update Script untuk @kyuuna/baileys"
+echo " 🚀 Auto Update Script untuk @Abrahan987/Baileys"
 echo "======================================"
 
 # Tanya mesej commit
