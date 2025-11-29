@@ -1,21 +1,21 @@
 {
-  "name": "@kyuuna/baileys",
+  "name": "@Abrahan987/Baileys",
   "version": "2.0.2",
-  "description": "@kyuuna/baileys",
+  "description": "@Abrahan987/Baileys",
   "keywords": [
     "baileys",
-    "kyuuna",
+    "Abrahan987",
     "whatsapp",
     "whatsapp-api",
     "whatsapp-web",
     "whatsapp-bot",
     "automation",
     "multi-device",
-    "kyuuna"
+    "Baileys"
   ],
-  "homepage": "https://www.npmjs.com/package/@kyuuna/baileys",
+  "homepage": "https://github.com/Abrahan987/Baileys",
   "repository": {
-    "url": "https://www.npmjs.com/package/@kyuuna/baileys"
+    "url": "https://github.com/Abrahan987/Baileys"
   },
   "license": "MIT",
   "author": "ABRAHAN-M",
@@ -37,8 +37,8 @@
     "gen:protobuf": "sh WAProto/GenerateStatics.sh",
     "lint": "eslint src --ext .js,.ts,.jsx,.tsx",
     "lint:fix": "eslint src --fix --ext .js,.ts,.jsx,.tsx",
-    "prepack": "echo 'Kyuuna Baileys'",
-    "prepare": "echo 'Kyuuna Baileys'",
+    "prepack": "echo 'Abrahan-M Baileys'",
+    "prepare": "echo 'Abrahan-M Baileys'",
     "preinstall": "node ./engine-requirements.js",
     "release": "release-it",
     "test": "jest"
