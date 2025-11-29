@@ -18,7 +18,7 @@
     "url": "https://www.npmjs.com/package/@kyuuna/baileys"
   },
   "license": "MIT",
-  "author": "kyuuna",
+  "author": "ABRAHAN-M",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "files": [
